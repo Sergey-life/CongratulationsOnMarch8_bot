@@ -4,7 +4,7 @@ const botCommands = require('./const')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
-    'Зайцік!\n\r'+botCommands.nastyha : 
+    'Зайцік!😻\n\r' + botCommands.nastyha : 
     'Незнакомец!' ||
     ctx.message.from.username === 'Serhiy_Kharchenko' ?
     'Привіт батя!' : 'Ти хто?'}`))
