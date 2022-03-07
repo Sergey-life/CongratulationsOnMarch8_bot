@@ -22,6 +22,19 @@ bot.command('interesting', async (ctx) => {
     }
 })
 
+bot.hears('Настя', (ctx) => {
+    try {
+        await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
+            [
+                [Markup.button.callback('Цікаві факти', 'btn_1')],
+                [Markup.button.callback('Музика', 'btn_2'), Markup.button.callback('Відео', 'btn_3')]
+            ]
+        ))
+    } catch (e) {
+        console.error(e)
+    }
+})
+
 function addActionBot(idButton, src, data) {
     bot.action(idButton, async (ctx) => {
         try {
