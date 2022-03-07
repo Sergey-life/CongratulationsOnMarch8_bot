@@ -12,8 +12,13 @@ const infoMusic = `
 const infoVideo = `
 Слухати музику - <a href="https://www.youtube.com/embed/j26ct9qjFQE">перейти</a>
 `
+const nastyha = `
+Вітаю тебе з 8 березня! За твою ангельську красу, за незрівнянну чарівність, за справжню жіночність, за всі ці якості! Бажаю весняного настрою і позитиву у всьому! Нехай удача не перестає тобі усміхатися! Нехай чудеса стаються частіше і роблять твоє життя казковим!
+`
 
 module.exports.commands = commands
 module.exports.infoText = infoText
 module.exports.infoMusic = infoMusic
 module.exports.infoVideo = infoVideo
+
+module.exports.nastyha = nastyha
