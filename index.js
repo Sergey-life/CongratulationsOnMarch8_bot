@@ -22,7 +22,7 @@ bot.command('interesting', async (ctx) => {
     }
 })
 
-bot.hears('Настя', (ctx) => {
+bot.hears('Настя', async (ctx) => {
     try {
         await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
             [
