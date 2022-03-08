@@ -60,7 +60,6 @@ bot.hears('Олена Добровольська', async (ctx) => {
                     [Markup.button.callback('Музичне вітання🎤🎼', 'tetyana_btn_2'), Markup.button.callback('Відео вітання📺💐', 'tetyana_btn_3')]
                 ]
             ))
-            await ctx.replyWithHTML("Я вас не знаю🤭! Спробуйте ввести своє ім'я ще раз!👍")
     } catch (e) {
         console.error(e)
     }
