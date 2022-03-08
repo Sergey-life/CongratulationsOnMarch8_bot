@@ -56,7 +56,7 @@ bot.hears('Олена Добровольська', async (ctx) => {
     try {
             await ctx.replyWithHTML(`Привіт, ${'Бабуся Олена!😻\n\r' + botCommands.olena}`, Markup.inlineKeyboard(
                 [
-                    [Markup.button.callback("Цікаві факти про твоє ім'я🤩", 'b_l_1')],
+                    [Markup.button.callback("Цікаві факти про ваше ім'я🤩", 'b_l_1')],
                     [Markup.button.callback('Музичне вітання🎤🎼', 'tetyana_btn_2'), Markup.button.callback('Відео вітання📺💐', 'tetyana_btn_3')]
                 ]
             ))
@@ -64,6 +64,7 @@ bot.hears('Олена Добровольська', async (ctx) => {
         console.error(e)
     }
 })
+
 function addActionBot(idButton, src, data) {
     bot.action(idButton, async (ctx) => {
         try {
