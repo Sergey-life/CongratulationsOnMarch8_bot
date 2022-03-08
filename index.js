@@ -37,16 +37,16 @@ bot.hears('Анастасія Харченко', async (ctx) => {
 //Мама
 bot.hears('Тетяна Пуштарик', async (ctx) => {
     try {
-        if (await ctx.message.from.username === 'nastia199212') {
-            await ctx.replyWithHTML(`Привіт, ${'Зайцік!😻\n\r' + botCommands.nastyha}`, Markup.inlineKeyboard(
+        // if (await ctx.message.from.username === 'nastia199212') {
+            await ctx.replyWithHTML(`Привіт, ${'Зайцік!😻\n\r' + botCommands.VitannaMama}`, Markup.inlineKeyboard(
                 [
-                    [Markup.button.callback("Цікаві факти про твоє ім'я", 'btn_1')],
-                    [Markup.button.callback('Музичне вітання', 'btn_2'), Markup.button.callback('Відео вітання', 'btn_3')]
+                    [Markup.button.callback("Цікаві факти про твоє ім'я", 'tetyana_btn_1')],
+                    [Markup.button.callback('Музичне вітання', 'tetyana_btn_2'), Markup.button.callback('Відео вітання', 'tetyana_btn_3')]
                 ]
             ))
-        } else {
-            await ctx.reply('Я тебе не знаю!')
-        }
+        // } else {
+        //     await ctx.reply('Я тебе не знаю!')
+        // }
     } catch (e) {
         console.error(e)
     }
@@ -72,6 +72,10 @@ function addActionBot(idButton, src, data) {
 addActionBot('btn_1', './img/nastya_1.jpg', botCommands.infoTextNastyha)
 addActionBot('btn_2', './img/2.jpg', botCommands.infoMusicNastyha)
 addActionBot('btn_3', './img/3.jpg', botCommands.infoVideoNastyha)
+
+addActionBot('tetyana_btn_1', './img/tetyana_1.jpg', botCommands.infoTextMama)
+addActionBot('tetyana_btn_2', './img/2.jpg', botCommands.infoMusicMama)
+addActionBot('tetyana_btn_3', './img/3.jpg', botCommands.infoVideoMama)
 
 bot.launch()
 
