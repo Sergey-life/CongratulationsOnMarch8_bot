@@ -3,7 +3,7 @@ require('dotenv').config()
 const botCommands = require('./const')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
-bot.start((ctx) => ctx.reply("Привіт, я створений для того щоб привітати тебе з сьогоднішнім святом!!!\n\r Ведіть своє повне ім'я та прізвище на українській мові." ))
+bot.start((ctx) => ctx.reply("Привіт🖐, я бот.🤖😎 Мене створили для того щоб привітати тебе з сьогоднішнім святом🌷🌹🌸🌼🌺!!!\n\r Введіть своє повне ім'я та прізвище на українській мові🇺🇦⌨️." ))
 bot.help((ctx) => ctx.reply(botCommands.commands))
 bot.command('interesting', async (ctx) => {
     try {
@@ -38,7 +38,7 @@ bot.hears('Анастасія Харченко', async (ctx) => {
 bot.hears('Тетяна Пуштарик', async (ctx) => {
     try {
         // if (await ctx.message.from.username === 'nastia199212') {
-            await ctx.replyWithHTML(`Привіт, ${'Мама Сергія Харченко😻\n\r' + botCommands.VitannaMama}`, Markup.inlineKeyboard(
+            await ctx.replyWithHTML(`Привіт, ${'Мама Сергія Харченко!😻\n\r' + botCommands.VitannaMama}`, Markup.inlineKeyboard(
                 [
                     [Markup.button.callback("Цікаві факти про твоє ім'я", 'tetyana_btn_1')],
                     [Markup.button.callback('Музичне вітання', 'tetyana_btn_2'), Markup.button.callback('Відео вітання', 'tetyana_btn_3')]
