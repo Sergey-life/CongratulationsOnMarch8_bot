@@ -23,7 +23,7 @@ bot.command('interesting', async (ctx) => {
 })
 
 bot.on('callback_query', async (ctx) => {
-   await ctx.reply(`Your answer was: ${ctx.update.callback_query.data}`);
+   await ctx.reply(`Your answer was: ${ await ctx.update.callback_query.data}`);
 })
 
 bot.hears('message', async (ctx) => {
