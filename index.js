@@ -20,7 +20,7 @@ bot.command('interesting', async (ctx) => {
 
 bot.hears('Настя', async (ctx) => {
     try {
-        ctx.reply(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
+        await ctx.reply(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
             'Зайцік!😻\n\r' + botCommands.nastyha :
             'Незнакомец!' ||
             ctx.message.from.username === 'Serhiy_Kharchenko' ?
