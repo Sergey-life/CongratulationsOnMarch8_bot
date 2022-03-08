@@ -20,13 +20,18 @@ bot.command('interesting', async (ctx) => {
 
 bot.hears('Настя', async (ctx) => {
     try {
-        await ctx.reply(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
-            'Зайцік!😻\n\r' + botCommands.nastyha :
-            'Незнакомец!' ||
-            ctx.message.from.username === 'Serhiy_Kharchenko' ?
-            'Батя!' : 'Ти хто?'
-        }`)
-            await ctx.replyWithHTML('<p>Про цей день</p>', Markup.inlineKeyboard(
+        // await ctx.reply(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
+        //     'Зайцік!😻\n\r' + botCommands.nastyha :
+        //     'Незнакомец!' ||
+        //     ctx.message.from.username === 'Serhiy_Kharchenko' ?
+        //     'Батя!' : 'Ти хто?'
+        // }`)
+            await ctx.replyWithHTML(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
+                'Зайцік!😻\n\r' + botCommands.nastyha :
+                'Незнакомец!' ||
+                ctx.message.from.username === 'Serhiy_Kharchenko' ?
+                    'Батя!' : 'Ти хто?'
+            }`, Markup.inlineKeyboard(
                 [
                     [Markup.button.callback('Цікаві факти', 'btn_1')],
                     [Markup.button.callback('Музика', 'btn_2'), Markup.button.callback('Відео', 'btn_3')]
