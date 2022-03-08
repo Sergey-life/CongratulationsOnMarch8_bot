@@ -18,8 +18,8 @@ const nastyha = `
 `
 
 module.exports.commands = commands
-module.exports.infoText = infoText
-module.exports.infoMusic = infoMusic
-module.exports.infoVideo = infoVideo
+module.exports.infoTextNastyha = infoTextNastyha
+module.exports.infoMusicNastyha = infoMusicNastyha
+module.exports.infoVideoNastyha = infoVideoNastyha
 
 module.exports.nastyha = nastyha
