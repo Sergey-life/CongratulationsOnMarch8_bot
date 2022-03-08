@@ -69,7 +69,7 @@ function addActionBot(idButton, src, data) {
     })
 }
 
-addActionBot('btn_1', './img/1.jpg', botCommands.infoTextNastyha)
+addActionBot('btn_1', './img/nastya_1.jpg', botCommands.infoTextNastyha)
 addActionBot('btn_2', './img/2.jpg', botCommands.infoMusicNastyha)
 addActionBot('btn_3', './img/3.jpg', botCommands.infoVideoNastyha)
 
