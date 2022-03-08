@@ -76,5 +76,5 @@ module.exports.infoMusicMama = infoMusicMama
 module.exports.infoVideoMama = infoVideoMama
 module.exports.VitannaMama = VitannaMama
 
-module.exports.VitannaMama = olena
-module.exports.VitannaMama = infoTextGrannyOlena
+module.exports.olena = olena
+module.exports.infoTextGrannyOlena = infoTextGrannyOlena
