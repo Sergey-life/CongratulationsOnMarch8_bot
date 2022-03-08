@@ -23,12 +23,12 @@ bot.hears('Анастасія Харченко', async (ctx) => {
         if (await ctx.message.from.username === 'nastia199212') {
             await ctx.replyWithHTML(`Привіт, ${'Зайцік!😻\n\r' + botCommands.nastyha}`, Markup.inlineKeyboard(
                 [
-                    [Markup.button.callback("Цікаві факти про твоє ім'я", 'btn_1')],
-                    [Markup.button.callback('Музичне вітання', 'btn_2'), Markup.button.callback('Відео вітання', 'btn_3')]
+                    [Markup.button.callback("Цікаві факти про твоє ім'я🤩", 'btn_1')],
+                    [Markup.button.callback('Музичне вітання🎤🎼', 'btn_2'), Markup.button.callback('Відео вітання📺💐', 'btn_3')]
                 ]
             ))
         } else {
-            await ctx.reply('Я тебе не знаю!')
+            await ctx.replyWithHTML("Я вас не знаю🤭! Спробуйте ввести своє ім'я ще раз!👍")
         }
     } catch (e) {
         console.error(e)
@@ -37,16 +37,16 @@ bot.hears('Анастасія Харченко', async (ctx) => {
 //Мама
 bot.hears('Тетяна Пуштарик', async (ctx) => {
     try {
-        // if (await ctx.message.from.username === 'nastia199212') {
+        if (await ctx.message.from.username === 'tetyana_pushtaryk') {
             await ctx.replyWithHTML(`Привіт, ${'Мама Сергія Харченко!😻\n\r' + botCommands.VitannaMama}`, Markup.inlineKeyboard(
                 [
-                    [Markup.button.callback("Цікаві факти про твоє ім'я", 'tetyana_btn_1')],
-                    [Markup.button.callback('Музичне вітання', 'tetyana_btn_2'), Markup.button.callback('Відео вітання', 'tetyana_btn_3')]
+                    [Markup.button.callback("Цікаві факти про твоє ім'я🤩", 'tetyana_btn_1')],
+                    [Markup.button.callback('Музичне вітання🎤🎼', 'tetyana_btn_2'), Markup.button.callback('Відео вітання📺💐', 'tetyana_btn_3')]
                 ]
             ))
-        // } else {
-        //     await ctx.reply('Я тебе не знаю!')
-        // }
+        } else {
+            await ctx.replyWithHTML("Я вас не знаю🤭! Спробуйте ввести своє ім'я ще раз!👍")
+        }
     } catch (e) {
         console.error(e)
     }
