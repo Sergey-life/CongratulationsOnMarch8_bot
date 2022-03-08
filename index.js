@@ -51,6 +51,20 @@ bot.hears('Тетяна Пуштарик', async (ctx) => {
         console.error(e)
     }
 })
+// Бабуся Олена
+bot.hears('Олена Добровольська', async (ctx) => {
+    try {
+            await ctx.replyWithHTML(`Привіт, ${'Бабуся Олена!😻\n\r' + botCommands.olena}`, Markup.inlineKeyboard(
+                [
+                    [Markup.button.callback("Цікаві факти про твоє ім'я🤩", 'b_l_1')],
+                    [Markup.button.callback('Музичне вітання🎤🎼', 'tetyana_btn_2'), Markup.button.callback('Відео вітання📺💐', 'tetyana_btn_3')]
+                ]
+            ))
+            await ctx.replyWithHTML("Я вас не знаю🤭! Спробуйте ввести своє ім'я ще раз!👍")
+    } catch (e) {
+        console.error(e)
+    }
+})
 function addActionBot(idButton, src, data) {
     bot.action(idButton, async (ctx) => {
         try {
@@ -74,6 +88,10 @@ addActionBot('btn_2', './img/2.jpg', botCommands.infoMusicNastyha)
 addActionBot('btn_3', './img/3.jpg', botCommands.infoVideoNastyha)
 
 addActionBot('tetyana_btn_1', './img/tetyana_1.jpg', botCommands.infoTextMama)
+addActionBot('tetyana_btn_2', './img/2.jpg', botCommands.infoMusicMama)
+addActionBot('tetyana_btn_3', './img/3.jpg', botCommands.infoVideoMama)
+
+addActionBot('b_l_1', './img/1.jpg', botCommands.infoTextGrannyOlena)
 addActionBot('tetyana_btn_2', './img/2.jpg', botCommands.infoMusicMama)
 addActionBot('tetyana_btn_3', './img/3.jpg', botCommands.infoVideoMama)
 
