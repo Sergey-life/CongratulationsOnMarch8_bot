@@ -38,7 +38,7 @@ bot.hears('Анастасія Харченко', async (ctx) => {
 bot.hears('Тетяна Пуштарик', async (ctx) => {
     try {
         // if (await ctx.message.from.username === 'nastia199212') {
-            await ctx.replyWithHTML(`Привіт, ${'Зайцік!😻\n\r' + botCommands.VitannaMama}`, Markup.inlineKeyboard(
+            await ctx.replyWithHTML(`Привіт, ${'Мама Сергія Харченко😻\n\r' + botCommands.VitannaMama}`, Markup.inlineKeyboard(
                 [
                     [Markup.button.callback("Цікаві факти про твоє ім'я", 'tetyana_btn_1')],
                     [Markup.button.callback('Музичне вітання', 'tetyana_btn_2'), Markup.button.callback('Відео вітання', 'tetyana_btn_3')]
