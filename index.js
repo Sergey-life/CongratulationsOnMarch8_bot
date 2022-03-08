@@ -24,7 +24,7 @@ bot.command('interesting', async (ctx) => {
 
 const getUserName = (name) => name
 
-bot.hears(getUserName, async (ctx) => {
+bot.on(getUserName, async (ctx) => {
     try {
         if (getUserName === 'Настя') {
             await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
