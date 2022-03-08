@@ -22,14 +22,18 @@ bot.command('interesting', async (ctx) => {
     }
 })
 
-bot.hears('Настя', async (ctx) => {
+const getUserName = (name) => name
+
+bot.hears(getUserName, async (ctx) => {
     try {
-        await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
-            [
-                [Markup.button.callback('Цікаві факти', 'btn_1')],
-                [Markup.button.callback('Музика', 'btn_2'), Markup.button.callback('Відео', 'btn_3')]
-            ]
-        ))
+        if (getUserName === 'Настя') {
+            await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
+                [
+                    [Markup.button.callback('Цікаві факти', 'btn_1')],
+                    [Markup.button.callback('Музика', 'btn_2'), Markup.button.callback('Відео', 'btn_3')]
+                ]
+            ))
+        }
     } catch (e) {
         console.error(e)
     }
