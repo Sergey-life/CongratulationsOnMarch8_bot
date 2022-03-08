@@ -26,7 +26,7 @@ bot.hears('Настя', async (ctx) => {
             ctx.message.from.username === 'Serhiy_Kharchenko' ?
             'Батя!' : 'Ти хто?'
         }`)
-        if (ctx.message.from.username === 'nastia199212') {
+        if (await ctx.message.from.username === 'nastia199212') {
             await ctx.replyWithHTML('<p>Про цей день</p>', Markup.inlineKeyboard(
                 [
                     [Markup.button.callback('Цікаві факти', 'btn_1')],
