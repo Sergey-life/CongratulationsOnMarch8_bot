@@ -5,18 +5,18 @@ const botCommands = require('./const')
 const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply("Привіт🖐, я бот.🤖😎 Мене створили для того щоб привітати тебе з сьогоднішнім святом🌷🌹🌸🌼🌺!!!\n\r Введіть своє повне ім'я та прізвище на українській мові🇺🇦⌨️." ))
 bot.help((ctx) => ctx.reply(botCommands.commands))
-bot.command('interesting', async (ctx) => {
-    try {
-        await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
-            [
-                [Markup.button.callback('Цікаві факти', 'btn_1')],
-                [Markup.button.callback('Музика', 'btn_2'), Markup.button.callback('Відео', 'btn_3')]
-            ]
-        ))
-    } catch (e) {
-        console.error(e)
-    }
-})
+// bot.command('interesting', async (ctx) => {
+//     try {
+//         await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
+//             [
+//                 [Markup.button.callback('Цікаві факти', 'btn_1')],
+//                 [Markup.button.callback('Музика', 'btn_2'), Markup.button.callback('Відео', 'btn_3')]
+//             ]
+//         ))
+//     } catch (e) {
+//         console.error(e)
+//     }
+// })
 // Настя
 bot.hears('Анастасія Харченко', async (ctx) => {
     try {
