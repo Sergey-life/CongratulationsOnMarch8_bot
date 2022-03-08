@@ -22,11 +22,13 @@ bot.command('interesting', async (ctx) => {
     }
 })
 
-const getUserName = (name) => name
+bot.on('callback_query', async (ctx) => {
+    ctx.reply(`Your answer was: ${ctx.update.callback_query.data}`);
+})
 
-bot.on(getUserName, async (ctx) => {
+bot.hears('message', async (ctx) => {
     try {
-        if (getUserName === 'Настя') {
+        if (etUserName === 'Настя') {
             await ctx.replyWithHTML('<strong>Про це свято</strong>', Markup.inlineKeyboard(
                 [
                     [Markup.button.callback('Цікаві факти', 'btn_1')],
