@@ -18,25 +18,18 @@ bot.command('interesting', async (ctx) => {
     }
 })
 
-bot.hears('Настя', async (ctx) => {
+bot.hears('Анастасія', async (ctx) => {
     try {
-        // await ctx.reply(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
-        //     'Зайцік!😻\n\r' + botCommands.nastyha :
-        //     'Незнакомец!' ||
-        //     ctx.message.from.username === 'Serhiy_Kharchenko' ?
-        //     'Батя!' : 'Ти хто?'
-        // }`)
-            await ctx.replyWithHTML(`Привіт, ${ctx.message.from.username === 'nastia199212' ?
-                'Зайцік!😻\n\r' + botCommands.nastyha :
-                'Незнакомец!' ||
-                ctx.message.from.username === 'Serhiy_Kharchenko' ?
-                    'Батя!' : 'Ти хто?'
-            }`, Markup.inlineKeyboard(
+        if (await ctx.message.from.username === 'nastia199212') {
+            await ctx.replyWithHTML(`Привіт, ${'Зайцік!😻\n\r' + botCommands.nastyha}`, Markup.inlineKeyboard(
                 [
                     [Markup.button.callback('Цікаві факти', 'btn_1')],
                     [Markup.button.callback('Музика', 'btn_2'), Markup.button.callback('Відео', 'btn_3')]
                 ]
             ))
+        } else {
+            await ctx.reply('Я тебе не знаю!')
+        }
     } catch (e) {
         console.error(e)
     }
